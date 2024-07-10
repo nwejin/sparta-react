@@ -23,6 +23,13 @@ const Home = () => {
       >
         WORK
       </button>
+      <button
+        onClick={() => {
+          navigate('/JSON');
+        }}
+      >
+        JSON
+      </button>
 
       <Link to={'/test'}>test 이동</Link>
     </div>

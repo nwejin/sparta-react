@@ -17,7 +17,7 @@ const Work = () => {
 
   return (
     <div>
-      <p>상사페이지</p>
+      <h1>Detail</h1>
       <p>{foundData.id}</p>
       <p>{foundData.todo}</p>
     </div>
