@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import User from '../user';
 import { style } from '../styles';
 import { useDispatch, useSelector } from 'react-redux';
-import { MINUS_ONE } from '../redux/modules/counter';
-import { RootState } from '../redux/config/configStore';
-import { plusOne, plusN, minusN } from '../redux/modules/counter';
+// import { MINUS_ONE } from '../redux/modules/counter';
+// import { RootState } from '../redux/config/configStore';
+// import { plusOne, plusN, minusN } from '../redux/modules/counter';
 
 const TestPage = () => {
   const [users, setUsers] = useState([
@@ -53,7 +53,7 @@ const TestPage = () => {
   };
 
   const dispatch = useDispatch();
-  const counter = useSelector((state: RootState) => state.counter);
+  // const counter = useSelector((state: RootState) => state.counter);
 
   const [number, setNumber] = useState(1);
 
@@ -89,7 +89,7 @@ const TestPage = () => {
           return <User user={value} key={value.id} remove={clickRemove} />;
         })}
       </div>
-
+      {/* 
       <div>{counter.number}</div>
       <input
         type="number"
@@ -129,7 +129,7 @@ const TestPage = () => {
         }}
       >
         -
-      </button>
+      </button> */}
     </style.mainBox>
   );
 };

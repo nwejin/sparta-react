@@ -30,6 +30,20 @@ const Home = () => {
       >
         JSON
       </button>
+      <button
+        onClick={() => {
+          navigate('/toolkit');
+        }}
+      >
+        redux toolkit
+      </button>
+      <button
+        onClick={() => {
+          navigate('/axiostest');
+        }}
+      >
+        axios
+      </button>
 
       <Link to={'/test'}>test 이동</Link>
     </div>

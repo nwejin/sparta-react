@@ -1,11 +1,23 @@
-import { createStore, combineReducers } from 'redux';
+// import { createStore, combineReducers } from 'redux';
 import counter from '../modules/counter';
+import { configureStore } from '@reduxjs/toolkit';
 
-const rootReducer = combineReducers({
-  counter,
+// 1. 일반 Redux
+// const rootReducer = combineReducers({
+//   counter,
+// });
+
+// const store = createStore(rootReducer);
+
+// 2. Redux Toolkit
+const store = configureStore({
+  reducer: {
+    // key: value
+    counter: counter,
+  },
 });
 
-const store = createStore(rootReducer);
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
-export type RootState = ReturnType<typeof rootReducer>;
 export default store;

@@ -6,7 +6,7 @@ const Work = () => {
   console.log(params);
 
   const foundData = data.find((item: any) => {
-    return item.id == params.id;
+    return item.id === params.id;
   });
 
   console.log(foundData);
